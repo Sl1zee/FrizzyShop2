@@ -1,0 +1,14 @@
+version: 1
+project: my-project
+
+repositories:
+
+    echobot:
+
+        url: https://github.com/Sl1zee/FrizzyShop2
+        branch: main
+
+
+        cpu: 1
+        cpuFraction: 20
+        memory: 256MiB
