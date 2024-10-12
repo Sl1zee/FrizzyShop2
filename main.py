@@ -24,13 +24,17 @@ def start(message):
 def handle_message(message):
     if message.text == "Сделать заказ":
         bot.send_message(message.chat.id,
-                         "Отправьте продавцу сообщеие с товаром из группы Frizzy Shop и укажите размер.")
+                         "Отправьте продавцу сообщеие с товаром из группы Frizzy Shop и укажите размер.\nПример:\n\nХуди Benzo Big Baby Tape\n\nРазмеры: S/M/L/XL\nЦена: 5999")
+        bot.send_message(message.chat.id,
+                         "Размер М")
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton('Сделать заказ', url='https://t.me/LilFrizy'))
         bot.send_message(message.chat.id, "Заказать ТУТ:", reply_markup=markup)
     if message.text == "Сделать заказ с Poizon":
         bot.send_message(message.chat.id,
-                         "Отправьте продавцу сообщеие с фото товара, артикул и укажите размер.")
+                         "Отправьте продавцу артикул и укажите размер.\nПример:")
+        bot.send_message(message.chat.id,
+                         "DM1602-111\nРазмер М")
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton('Сделать заказ с Poizon', url='https://t.me/LilFrizy'))
         bot.send_message(message.chat.id, "Заказать ТУТ:", reply_markup=markup)
