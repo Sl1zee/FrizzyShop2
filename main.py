@@ -24,7 +24,9 @@ def start(message):
 def handle_message(message):
     if message.text == "Сделать заказ":
         bot.send_message(message.chat.id,
-                         "Отправьте продавцу сообщеие с товаром из группы Frizzy Shop и укажите размер.\nПример:\n\nХуди Benzo Big Baby Tape\n\nРазмеры: S/M/L/XL\nЦена: 5999")
+                         "Отправьте продавцу сообщеие с товаром из группы Frizzy Shop и укажите размер.\nПример:")
+        bot.send_message(message.chat.id,
+                         "Худи Benzo Big Baby Tape\n\nРазмеры: S/M/L/XL\nЦена: 5999")
         bot.send_message(message.chat.id,
                          "Размер М")
         markup = types.InlineKeyboardMarkup()
